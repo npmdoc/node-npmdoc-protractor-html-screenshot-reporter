@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"protractor-html-screenshot-reporter",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "protractor-html-screenshot-reporter",
+    "description": "api documentation for [protractor-html-screenshot-reporter (v0.0.21)](https://github.com/jintoppy/protractor-html-screenshot-reporter) [![npm package](https://img.shields.io/npm/v/npmdoc-protractor-html-screenshot-reporter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-protractor-html-screenshot-reporter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-protractor-html-screenshot-reporter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-protractor-html-screenshot-reporter)",
     "devDependencies": {
-        "protractor-html-screenshot-reporter": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "protractor-html-screenshot-reporter": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-protractor-html-screenshot-reporter",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-protractor-html-screenshot-reporter",
+    "keywords": [
+        "documentation",
+        "protractor-html-screenshot-reporter"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_protractor_html_screenshot_reporter.js",
+    "name": "npmdoc-protractor-html-screenshot-reporter",
+    "nameAlias": "npmdoc_protractor_html_screenshot_reporter",
+    "nameOriginal": "npmdoc-protractor-html-screenshot-reporter",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-protractor-html-screenshot-reporter"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
