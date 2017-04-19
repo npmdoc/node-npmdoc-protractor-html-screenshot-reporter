@@ -56,6 +56,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.protractor-html-screenshot-reporter.protractor-html-screenshot-reporter">
+            function <span class="apidocSignatureSpan"></span>protractor-html-screenshot-reporter
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">protractor-html-screenshot-reporter.</span>jsonparser</span>
 
         </li>
@@ -143,6 +152,63 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.protractor-html-screenshot-reporter" id="apidoc.module.protractor-html-screenshot-reporter">module protractor-html-screenshot-reporter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.protractor-html-screenshot-reporter.protractor-html-screenshot-reporter" id="apidoc.element.protractor-html-screenshot-reporter.protractor-html-screenshot-reporter">
+        function <span class="apidocSignatureSpan"></span>protractor-html-screenshot-reporter
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ScreenshotReporter(options) {
+	options = options || {};
+	if(!options.baseDirectory || options.baseDirectory.length === 0) {
+		throw new Error('Please pass a valid base directory to store the ' +
+			'screenshots into.');
+	} else {
+		this.baseDirectory = options.baseDirectory;
+	}
+
+	if(typeof (options.cssOverrideFile) !== 'undefined' &amp;&amp; _.isString(options.cssOverrideFile) ){
+		this.cssOverrideFile = options.cssOverrideFile;
+	} else {
+		this.cssOverrideFile = null;
+	}
+
+	this.pathBuilder = options.pathBuilder || defaultPathBuilder;
+	this.disableMetaData = options.disableMetaData || false;
+	this.combinedJsonFileName = options.combinedJsonFileName || 'combined.json';
+	this.docTitle = options.docTitle || 'Generated test report';
+	this.docHeader = options.docHeader || 'Test Results';
+	this.docName = options.docName || 'report.html';
+	this.metaDataBuilder = options.metaDataBuilder || defaultMetaDataBuilder;
+	this.preserveDirectory = options.preserveDirectory || false;
+	this.takeScreenShotsForSkippedSpecs =
+		options.takeScreenShotsForSkippedSpecs || false;
+		this.takeScreenShotsOnlyForFailedSpecs =
+ 		options.takeScreenShotsOnlyForFailedSpecs || false;
+ 	this.finalOptions = {
+ 		takeScreenShotsOnlyForFailedSpecs: this.takeScreenShotsOnlyForFailedSpecs,
+ 		takeScreenShotsForSkippedSpecs: this.takeScreenShotsForSkippedSpecs,
+ 		metaDataBuilder: this.metaDataBuilder,
+ 		pathBuilder: this.pathBuilder,
+ 		disableMetaData: this.disableMetaData,
+ 		combinedJsonFileName: this.combinedJsonFileName,
+ 		baseDirectory: this.baseDirectory,
+ 		docTitle: this.docTitle,
+ 		docHeader: this.docHeader,
+ 		docName: this.docName,
+ 		cssOverrideFile: this.cssOverrideFile
+ 	};
+
+ 	if(!this.preserveDirectory){
+ 		util.removeDirectory(this.finalOptions.baseDirectory);
+ 	}
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
 
