@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "protractor-html-screenshot-reporter",
-    "description": "api documentation for [protractor-html-screenshot-reporter (v0.0.21)](https://github.com/jintoppy/protractor-html-screenshot-reporter) [![npm package](https://img.shields.io/npm/v/npmdoc-protractor-html-screenshot-reporter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-protractor-html-screenshot-reporter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-protractor-html-screenshot-reporter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-protractor-html-screenshot-reporter)",
+    "description": "#### api documentation for  [protractor-html-screenshot-reporter (v0.0.21)](https://github.com/jintoppy/protractor-html-screenshot-reporter)  [![npm package](https://img.shields.io/npm/v/npmdoc-protractor-html-screenshot-reporter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-protractor-html-screenshot-reporter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-protractor-html-screenshot-reporter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-protractor-html-screenshot-reporter)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "protractor-html-screenshot-reporter": "*",
@@ -36,5 +36,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.1"
+    "version": "0.0.2"
 }
